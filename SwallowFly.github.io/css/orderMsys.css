@@ -1,0 +1,109 @@
+
+.header {background: #3173E2;}
+.header .log {margin-left:95px;}
+.header .log a {color: #fff;font-size: 28px;
+    height:74px;display: inline-block;line-height: 74px;
+    letter-spacing:3px;
+}
+.header .login .username {color: #fff;font-size: 14px;font-weight: bold;}
+.wareHose-system {background: #fff;min-width: 1200px;
+    position: absolute!important;
+    top: 74px!important;
+    height: auto!important;
+    position: relative;
+    top: -160px;
+    _top: -200px;
+    height: 100%;
+    bottom: 0px;
+    width: 100%;
+   /* overflow: hidden;*/
+}
+.wareHose-system-left {width: 218px;height:100%;float: left;
+    background: #fff url("../images/left_bg.png") repeat-y right;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.wareHose-system-left dt {
+    display: block;
+    line-height: 30px;
+    padding-left: 35px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: normal;
+    background: url("../images/left.png");
+}
+.wareHose-system-left dt.current { background: url("../images/left2.png");}
+.wareHose-system-left dl dd  {/*padding: 3px 8px;*/display: none;}
+.wareHose-system-left dl dd ul li {height:29px;line-height: 29px;padding-left:40px;background: #fff;
+    border-bottom: 1px dashed #ccc;}
+.wareHose-system-left dl dd ul li:hover {background: rgba(0,0,0,0.1)}
+.wareHose-system-left dl dd ul li.active {background: #ffa631;}
+.wareHose-system-left dl dd ul li a {display: inline-block;width: 100%;height:100%;}
+
+.wareHose-system-right {overflow: hidden;}
+.orderMsys-title {
+     height: 29px;
+    border: 1px solid #C6E2F2;
+    border-top: none;
+    border-bottom: none;
+    background-color: #e0e0e0;
+    color: #333333;
+    line-height: 29px;
+    padding-left: 16px;
+    clear: both;}
+.orderMsys-title ul li {float: left;}
+
+.orderform {
+    font-family: Microsoft YaHei,SimHei,SimSun;
+    font-size: 12px;
+    padding: 0px;
+    border: 0px solid #cccdd3;
+    width: 880px;
+    margin: 0 auto;
+
+}
+.orderform .yzm-btn {background: #f8b862;cursor: pointer;margin-left: 50px;}
+.orderform .text-input {width: 120px;
+    color: #555;
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    margin-top: 4px;
+    }
+.orderform input, .orderform select, .orderform textarea {
+    margin-bottom: 5px;
+}
+.orderform .text-input1 {width: 90px;}
+.infoitems {margin-bottom: 20px;}
+.infodesc {
+    background: #426666;
+    width: 77px;
+    line-height: 23px;
+    text-align: center;
+    float: left;
+    display: inline;
+    font-size: 14px;
+    color:#fff;
+}
+.orderform .inputdiv {
+    float: left;
+    display: block;
+
+
+}
+.orderform .inputdiv ul li {
+    margin-left: 20px;
+}
+.orderform .inputdiv span {
+    height: 20px;
+    line-height: 14px;
+    color: #000;
+    width: 95px;
+    text-align: right;
+    display: inline-block;
+}
+/*∂©µ•¥Ú”°*/
+.orderPrint-table tr td {border:1px solid #ccc;font-size: 13px;}
+.qianzi {}
+.qianzi dl dd span {display:inline-block;width: 50px;height:60px;border-bottom: 1px solid #000;}

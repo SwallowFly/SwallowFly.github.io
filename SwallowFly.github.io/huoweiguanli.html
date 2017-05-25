@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <title>货位管理</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/warehose-system.css"/>
+    <script src="js/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="header clearfix">
+        <div class="log"><a href="index.html">金昌物流管理系统</a></div>
+       <div class="login-links-phone">
+           <div class="login">
+               <div class="username">用户:未登录</div>
+               <div class="main_nav">
+                   <ul>
+                       <li><a class="cd-signin" href="#0">注销</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+</div><!--header/-->
+
+       <div class="wareHose-system clearfix">
+           <div class="wareHose-system-left">
+
+                   <dl>
+                       <dt>仓库及货位分布展示</dt>
+                       <dd>
+                           <ul>
+                               <li class="active"><a href="#">仓库及货位分布展示</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>入库管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">预约入库</a></li>
+                               <li><a href="rukudan.html">入库单管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>串码管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">串码生成</a></li>
+                               <li><a href="#">带串码商品管理</a></li>
+
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>出库管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="chukudan.html">出库单管理</a></li>
+                               <li><a href="#">出库作业单管理</a></li>
+                               <li><a href="#">入库作业单管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt class="current">库存管理</dt>
+                       <dd style="display: block;">
+                           <ul>
+                               <li><a href="shishikucun.html">实时库存</a></li>
+                               <li class="active"><a href="huoweiguanli.html">货位管理</a></li>
+                               <li><a href="#">出入库流水</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>盘点管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">盘点管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>移库管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">移库单管理</a></li>
+                               <li><a href="#">移库作业单管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>条码管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">条码生成管理</a></li>
+                               <li><a href="#">带条码商品管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>仓库装卸管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">装卸看板</a></li>
+                               <li><a href="#">装卸工任务管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+
+           </div>
+           <div class="wareHose-system-right clearfix">
+               <div class="myposition clearfix">
+                   <div class="positionpic"><img src="images/icon.gif" alt=""/></div>
+                   <div class="positiontitle">
+                       <a href="index2.html" style="margin-left: 10px;">首页</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="warehoseSystem.html">仓储管理系统</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="huoweiguanli.html">货位管理</a>
+                   </div>
+               </div>
+               <div class="wareHose-system-huowei-left">
+                   <div class="wareHose-system-right-hd">
+                       <table class="table-input">
+
+                           <tr>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">主仓储区：</td>
+                               <td><select>
+                                   <option>所有主仓储去</option>
+                                   <option>所有主仓储去</option>
+                                   <option>所有主仓储去</option>
+                               </select></td>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">存货公司：</td>
+                               <td><select>
+                                   <option>存货公司1</option>
+                                   <option>存货公司2</option>
+                                   <option>存货公司2</option>
+                                   <option>存货公司4</option>
+                               </select></td>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">仓库：</td>
+                               <td align="center" class="resetBtn">
+                                   <input type="button" value="查询">
+                               </td>
+                           </tr>
+
+                       </table>
+                   </div>
+                   <div style="text-align: left;">货位情况列表</div>
+                   <div class="wareHose-system-right-middle">
+                       <table class="table-bordered" style="width: 100%;margin: 0 auto;">
+
+                           <tr>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货位编号</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>托盘号码</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>托盘状态</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货单编号</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>物料代码</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>品名</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>包装及规格</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>单位</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>存储期</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单号</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货单号</strong></td>
+                               <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>托运人</strong></td>
+
+                           </tr>
+                           <tr>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+                               <td align="center"></td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+                               <td align="center">&nbsp;</td>
+
+                           </tr>
+
+                       </table>
+                   </div>
+                   <div class="wareHose-system-right-bd">
+
+                       <table class="table-input">
+                           <caption style="text-align: left;">货位、托盘情况显示</caption>
+                           <tr>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">货位编号：</td>
+                               <td><input type="text"/></td>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">货位状态：</td>
+                               <td><input type="text"/></td>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">托盘号码：</td>
+                               <td>
+                                   <input type="text">
+                               </td>
+                           </tr>
+                           <tr>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">托盘状态：</td>
+                               <td><input type="text"/></td>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">主仓储区：</td>
+                               <td><input type="text"/></td>
+                               <td width="10%" align="right" bgcolor="#f1f1f1">存货公司：</td>
+                               <td>
+                                   <input type="text">
+                               </td>
+                           </tr>
+                       </table>
+                   </div>
+               </div>
+               <div class="wareHose-system-huowei-right">
+                   <div class="wareHose-system-huowei-top">
+                       <table class="table-input table-border">
+                           <caption>查询方式选择</caption>
+                           <tr>
+                               <td align="right"><input type="radio"/></td>
+                               <td align="left">货位编号</td>
+                               <td align="right"><input type="radio"/></td>
+                               <td align="left">货单编号</td>
+
+                           </tr>
+                           <tr>
+                               <td align="right"><input type="radio"/></td>
+                               <td align="left">货位状态</td>
+                               <td align="right"><input type="radio"/></td>
+                               <td align="left">物料代码</td>
+                           </tr>
+                           <tr>
+                               <td align="right"><input type="radio"/></td>
+                               <td align="left">物品名称</td>
+
+                           </tr>
+                           <tr>
+                               <td align="center" colspan="4">请输入：<input type="text"/></td>
+
+                           </tr>
+                           <tr>
+                               <td align="center" colspan="4" class="resetBtn"><input type="button"  value="查询"/></td>
+
+
+                           </tr>
+                       </table>
+                   </div>
+                   <h1 style="text-align: center;font-weight: normal;">货物情况显示</h1>
+                   <div class="wareHose-system-huowei-bottom">
+                    <table class="table-bordered"style="width: 100%;margin: 0 auto;">
+
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">货物名称：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">物料代码：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">包装规格：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">单位：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">数量：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">安全限额：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">生产日期：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">保质期：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">入库时间：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">货单编号：</td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%" style="background: #f1f1f1;">入库类型：</td>
+                            <td width="70%"></td>
+                        </tr>
+                    </table>
+
+                   </div>
+               </div>
+           </div>
+
+</div><!--content/-->
+</body>
+</html>
+<script>
+    //侧边栏
+$(function(){
+    $(".wareHose-system-left > dl > dt").click(function(){
+        $(this).toggleClass("current").parents("dl");
+        $(this).next("dd").slideToggle(200);
+
+    });
+    var heightLeft = $(".wareHose-system-right").height();
+    $(".wareHose-system-left").height(heightLeft)+"px";
+})
+
+</script>

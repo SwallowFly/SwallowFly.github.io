@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <title>调度管理系统</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/warehose-system.css"/>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="header clearfix">
+        <div class="log"><a href="index.html">金昌物流管理系统</a></div>
+        <div class="login-links-phone">
+            <div class="login">
+                <div class="username">用户:未登录</div>
+                <div class="main_nav">
+                    <ul>
+                        <li><a class="cd-signin" href="#0">注销</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</div><!--header/-->
+        <div class="wareHose-system clearfix">
+            <div class="wareHose-system-left">
+                <dl>
+                    <dt class="current">调度管理</dt>
+                    <dd style="display: block;">
+                        <ul>
+                            <li class="active"><a href="orderMsys.html">调度管理</a></li>
+                            <li><a href="dingdanchaxun.html">任务单管理</a></li>
+                            <li><a href="dingdanchaxun.html">统计分析</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="wareHose-system-right clearfix" style="height: 800px;">
+                <div class="myposition clearfix">
+                    <div class="positionpic"><img src="images/icon.gif" alt=""/></div>
+                    <div class="positiontitle">
+                        <a href="index2.html" style="margin-left: 10px;">首页</a>
+                        <font style="color:black;font-family:cursive;">&gt;</font>
+                        <a href="dispatchSystem.html">调度管理系统</a>
+                        <font style="color:black;font-family:cursive;">&gt;</font>
+                        <a href="dispatchSystem.html">调度管理</a>
+                    </div>
+                </div>
+                <div class="wareHose-system-rkd-title clearfix">
+                    <dl class="rud-dl">
+                        <dt>订单编号：</dt>
+                        <dd>
+                            <input type="text" style="width: 200px;" value="035101706111"/>
+                        </dd>
+                    </dl>
+                    <dl class="rud-dl">
+                        <dt>起止时间：</dt>
+
+                        <dd>
+                            <input type="text" onfocus="WdatePicker()" maxlength="12" class="text-input text-input_1 Wdate" readonly="" value="2017-04-19">
+                            至
+                            <input type="text" onfocus="WdatePicker()" maxlength="12" class="text-input text-input_1 Wdate" readonly="" value="2017-04-19">
+
+                        </dd>
+                    </dl>
+                    <dl class="rud-dl">
+                        <dt>客户：</dt>
+                        <dd>
+                            <input type="text" style="width: 150px;"/>
+                        </dd>
+                    </dl>
+                    <dl class="rud-dl">
+                        <dd>
+                            <input type="button" style="width: 100px;cursor: pointer; background: #2f96b4;color: #fff;" value="查询"/>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="wareHouse-order-table">
+                    <table class="table-bordered" style="width: 100%;margin: 0 auto;" id="table1">
+                     <tbpdy id="tabel2">
+                         <tr>
+                             <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单编号</strong></td>
+                             <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>制单时间</strong></td>
+                             <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单类型</strong></td>
+                             <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>制单人</strong></td>
+                             <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单状态</strong></td>
+                             <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>编辑</strong></td>
+
+                         </tr>
+
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td align="center" onclick="showSuspended();">035101706111</td>
+                             <td align="center">2017-4-24 9:02:22</td>
+                             <td align="center">入库</td>
+                             <td align="center">admin</td>
+                             <td align="center">待审核</td>
+                             <td align="center">
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                 <a href="javascript:void (0)">撤销</a>
+                                 <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                             </td>
+                         </tr>
+
+                     </tbpdy>
+                    </table>
+                </div>
+
+               <!-- 悬浮窗口-->
+                <div class="suspended-window">
+                    <div class="suspended-window-close clearfix">
+                        <span class="suspended-window-title">任务看板</span>
+                        <span class="suspended-window-closeBtn">×</span>
+                    </div>
+                    <div class="suspended-window-content clearfix">
+                        <form  class="clearfix" action="">
+                            <dl>
+                                <dt>订单号：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>订单类型：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>发货人姓名：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>发货人电话：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>发货人邮编：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>发货人地址：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"style="width: 650px;"/>
+                                </dd>
+                            </dl>
+
+                            <dl>
+                                <dt>收货人姓名：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>收货人电话：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>收货人邮编：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>收货人地址：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"style="width: 650px;"/>
+                                </dd>
+                            </dl>
+
+                            <dl>
+                                <dt>服务方式：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>取货地址：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"style="width: 650px;"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>取货时间：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>计划完成时间：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+
+                            <dl>
+                                <dt>发货地址：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"style="width: 650px;"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>发货时间：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>计划完成时间：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+
+                            <dl>
+                                <dt>受理园区：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>入库受理仓库：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>出库受理仓库：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl class="c_car">
+                                <dt>作业车辆：</dt>
+                                <dd id="h_car">
+                                    <h1 id="h_car_h1" style="overflow: hidden;text-overflow: ellipsis;white-space:nowrap;">{{checkedNames}}</h1>
+                                    <div  id="checkbox_sel_3" class="checkbox_sel" >
+                                        <div class="checkbox_sel_con select_input" id="src-city1">
+                                            <ul>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="货车1" id="h_1"/>
+                                                    <label for="h_1">货车1</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="货车2" id="h_2"/>
+                                                    <label for="h_2">货车2</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="货车3" id="h_3"/>
+                                                    <label for="h_2">货车3</label>
+                                                </li>
+                                            </ul>
+
+                                            </div>
+                                        <div class="c_btn">
+                                            <span class="c_btn_close" style="margin-left: 75px; " >关闭</span>
+                                        </div>
+                                        </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>司机：</dt>
+                                <dd>
+                                    <input type="text" readonly="readonly"/>
+                                </dd>
+                            </dl>
+                            <dl class="c_car">
+                                <dt>叉车：</dt>
+                                <dd id="c_car">
+                                   <h1 id="c_car_h1"style="overflow: hidden;text-overflow: ellipsis;white-space:nowrap;">{{checkedNames}}</h1>
+                                    <div id="checkbox_sel_1" class="checkbox_sel">
+                                        <div class="checkbox_sel_con select_input" id="src-city2">
+                                            <ul>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="叉车1" id="c_1"/>
+                                                    <label for="c_1">叉车1</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="叉车2" id="c_2"/>
+                                                    <label for="c_2">叉车2</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="叉车3" id="c_3"/>
+                                                    <label for="c_3">叉车3</label>
+                                                </li>
+                                            </ul>
+                                            </div>
+                                        <div class="c_btn">
+                                            <span class="c_btn_close" style="margin-left: 75px;"onclick="changge();" >关闭</span>
+                                        </div>
+                                        </div>
+
+                                </dd>
+                            </dl>
+                            <dl class="c_car">
+                                <dt>装卸工：</dt>
+                                <dd id="z_worker">
+                                    <h1 id="z_worker_h1" style="overflow: hidden;text-overflow: ellipsis;white-space:nowrap;">{{checkedNames}}</h1>
+                                    <div id="checkbox_sel_2" class="checkbox_sel">
+                                        <div class="checkbox_sel_con select_input" id="src-city3">
+                                            <ul>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="装卸工1" id="z_1"/>
+                                                    <label for="z_1">装卸工1</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="装卸工2" id="z_2"/>
+                                                    <label for="z_2">装卸工2</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_input" type="checkbox" v-model="checkedNames" value="装卸工3" id="z_3"/>
+                                                    <label for="z_3">装卸工3</label>
+                                                </li>
+                                            </ul>
+                                            </div>
+                                        <div class="c_btn">
+                                            <span class="c_btn_close" style="margin-left: 75px;" >关闭</span>
+                                        </div>
+                                        </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>备注：</dt>
+                                <dd>
+                                    <input style="width: 650px;height: 50px;background: #F4F4F3;outline: none;text-indent: 2em;"/>
+                                </dd>
+                            </dl>
+                            <dl class="sumbitInfo clearfix" style="margin-left: 320px;">
+                                <dd style="border: 0;">
+                                    <input type="button" value="提交" style="width: 50px;border: 0;background: none;color: #fff;cursor: pointer;"/>
+                                </dd>
+                            </dl>
+                            <dl class="resetInfo clearfix">
+                                <dd style="border: 0;">
+                                    <input type="button" value="重置" style="width: 50px;border: 0;background: none;color: #fff;cursor: pointer;"/>
+                                </dd>
+                            </dl>
+                        </form>
+
+                        <div class="wareHouse-order-table">
+                            <table class="table-bordered" style="width: 100%;margin: 0 auto;">
+                                <tr>
+                                    <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单编号</strong></td>
+                                    <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>制单时间</strong></td>
+                                    <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单类型</strong></td>
+                                    <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>制单人</strong></td>
+                                    <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单状态</strong></td>
+                                    <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>编辑</strong></td>
+
+                                </tr>
+
+                                <tr>
+                                    <td align="center" onclick="showSuspended();">035101706111</td>
+                                    <td align="center">2017-4-24 9:02:22</td>
+                                    <td align="center">入库</td>
+                                    <td align="center">admin</td>
+                                    <td align="center">待审核</td>
+                                    <td align="center">
+                                        <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                        <a href="javascript:void (0)">撤销</a>
+                                        <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            </div>
+                        <div class="paymentConfirm-btn clearfix">
+                            <div class="payment">
+                                <dl>
+                                    <dt>支付方式：</dt>
+                                    <dd>
+                                        <select style="width: 100px;">
+                                            <option>现金支付</option>
+                                            <option>网银支付</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="confirm-btn">
+                                <dl class="resetInfo clearfix">
+                                    <dd style="border: 0;">
+                                        <input type="button" value="确认支付" style="width: 100px;border: 0;background: none;color: #fff;cursor: pointer;"/>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div><!--content/-->
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/draggabilly.pkgd.min.js"></script>
+<script src="js/my97datepicker/WdatePicker.js"></script>
+<script src="js/vue.min.js"></script>
+<script>
+    function m_moudle(id){
+        new Vue({
+            el: id,
+            data: {
+                checkedNames: []
+            }
+        })
+    }
+    m_moudle("#h_car");
+    m_moudle("#c_car");
+    m_moudle("#z_worker");
+
+</script>
+<script>
+    //侧边栏
+    $(function(){
+        $(".wareHose-system-left > dl > dt").click(function(){
+            $(this).toggleClass("current").parents("dl").siblings().find("dt").removeClass("current");
+            $(this).next("dd").slideToggle(200);
+
+        });
+    });
+//拖拽
+    $(".suspended-window").draggabilly();
+//弹出窗口
+    function showSuspended(){
+        $(".suspended-window").show();
+    }
+    $(".suspended-window-closeBtn").click(function(){
+        $(".suspended-window").hide();
+    });
+    //显示
+    function show_id(id1,id2){
+        $(id1).click(function(){
+            $(id2).show();
+
+        });
+
+
+    }
+    show_id("#c_car_h1","#checkbox_sel_1");
+    show_id("#z_worker_h1","#checkbox_sel_2");
+    show_id("#h_car_h1","#checkbox_sel_3");
+    //关闭
+    $(".c_btn_close").click(function(){
+        $(".checkbox_sel").hide();
+    });
+    var heightLeft = $(".wareHose-system-right").height();
+    $(".wareHose-system-left").height(heightLeft)+"px";
+</script>
+
+

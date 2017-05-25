@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <title>入库单管理</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/warehose-system.css"/>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="header clearfix">
+
+        <div class="log"><a href="index.html">金昌物流管理系统</a></div>
+       <div class="login-links-phone">
+           <div class="login">
+               <div class="username">用户:admin</div>
+               <div class="main_nav">
+                   <ul>
+                       <li><a class="cd-signin" href="#0">注销</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+
+</div><!--header/-->
+
+       <div class="wareHose-system clearfix">
+           <div class="wareHose-system-left">
+
+                   <dl>
+                       <dt>仓库及货位分布展示</dt>
+                       <dd>
+                           <ul>
+                               <li class="active"><a href="#">仓库及货位分布展示</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt class="current">入库管理</dt>
+                       <dd style="display: block;">
+                           <ul>
+                               <li><a href="#">预约入库</a></li>
+                               <li class="active"><a href="rukudan.html">入库单管理</a></li>
+                               <li><a href="#">入库作业单管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>串码管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">串码生成</a></li>
+                               <li><a href="#">带串码商品管理</a></li>
+
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>出库管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="chukudan.html">出库单管理</a></li>
+                               <li><a href="#">出库作业单管理</a></li>
+
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>库存管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="shishikucun.html">实时库存</a></li>
+                               <li><a href="huoweiguanli.html">货位管理</a></li>
+                               <li><a href="#">出入库流水</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>盘点管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">盘点管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>移库管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">移库单管理</a></li>
+                               <li><a href="#">移库作业单管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>条码管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">条码生成管理</a></li>
+                               <li><a href="#">带条码商品管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>仓库装卸管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">装卸看板</a></li>
+                               <li><a href="#">装卸工任务管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+           </div>
+           <div class="wareHose-system-right">
+               <div class="myposition clearfix">
+                   <div class="positionpic"><img src="images/icon.gif" alt=""/></div>
+                   <div class="positiontitle">
+                       <a href="index2.html" style="margin-left: 10px;">首页</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="warehoseSystem.html">仓储管理系统</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="rukudan.html">入库单管理</a>
+                   </div>
+               </div>
+                <div class="wareHose-system-rkd-hd">
+                    <div class="wareHose-system-rkd-title clearfix">
+                        <dl class="rud-dl">
+                            <dt>入库类型：</dt>
+                            <dd>
+                                <select>
+                                    <option>正常入库</option>
+                                    <option>正常入库</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>主仓储区：</dt>
+                            <dd>
+                                <select>
+                                    <option>保税区</option>
+                                    <option>保税区</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>仓库区编号：</dt>
+                            <dd>
+                                <input type="text"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>存储单位：</dt>
+                            <dd>
+                                <select style="width: 260px;">
+                                    <option>阿斯塔纳航空公司</option>
+                                    <option>阿斯塔纳航空公司</option>
+                                </select>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="wareHose-system-rkd-con clearfix">
+                        <dl class="rud-dl">
+                            <dt>入库单编号：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>订单号码：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>制单时间：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>收货人：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>入库人：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+               <div class="wareHose-system-rkd-bd">
+                   <table class="table-bordered" style="width: 100%;margin: 0 auto;">
+                       <tr>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货物编号</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货物名称</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>包装类型</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>单位</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货物类型</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货物所在货位编号</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货物所在仓库编号</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>入库时间</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>存储期</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单号</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>货单号</strong></td>
+                           <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>托运人</strong></td>
+
+                       </tr>
+                       <tr>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+                           <td align="center">&nbsp;</td>
+
+                       </tr>
+                   </table>
+                  </div>
+               </div>
+           </div>
+</div><!--content/-->
+
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jcwly.js"></script>

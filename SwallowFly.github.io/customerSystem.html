@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <title>客户管理系统</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/warehose-system.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/my97datepicker/WdatePicker.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+<div class="header clearfix">
+        <div class="log"><a href="index.html">金昌物流管理系统</a></div>
+        <div class="login-links-phone">
+            <div class="login">
+                <div class="username">用户:admin</div>
+                <div class="main_nav">
+                    <ul>
+                        <li><a class="cd-signin" href="#0">注销</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div><!--header/-->
+        <div class="wareHose-system clearfix">
+            <div class="wareHose-system-left">
+
+                <dl>
+                    <dt class="current">客户管理</dt>
+                    <dd style="display: block;">
+                        <ul>
+                            <li class="active"><a href="customerSystem.html">客户维护</a></li>
+                            <li><a href="javascript:void (0)">客户查询</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+
+
+            </div>
+            <div class="wareHose-system-right clearfix">
+                <div class="myposition clearfix">
+                    <div class="positionpic"><img src="images/icon.gif" alt=""/></div>
+                    <div class="positiontitle">
+                        <a href="index2.html" style="margin-left: 10px;">首页</a>
+                        <font style="color:black;font-family:cursive;">&gt;</font>
+                        <a href="customerSystem.html">客户管理系统</a>
+                        <font style="color:black;font-family:cursive;">&gt;</font>
+                        <a href="customerSystem.html">客户维护</a>
+
+                    </div>
+                </div>
+                <div class="wareHose-system-rkd-title clearfix">
+                    <dl class="rud-dl">
+                        <dt>订单编号：</dt>
+                        <dd>
+                            <input type="text" style="width: 200px;" value="035101706111"/>
+                        </dd>
+                    </dl>
+                    <dl class="rud-dl">
+                        <dt>起止时间：</dt>
+                        <dd>
+                            <input type="text" onfocus="WdatePicker()" maxlength="12" class="text-input text-input_1 Wdate" readonly="" value="2017-04-19">
+                            至
+                            <input type="text" onfocus="WdatePicker()" maxlength="12" class="text-input text-input_1 Wdate" readonly="" value="2017-04-19">
+
+                        </dd>
+                    </dl>
+                    <dl class="rud-dl">
+                        <dt>客户：</dt>
+                        <dd>
+                            <input type="text" style="width: 150px;"/>
+                        </dd>
+                    </dl>
+                    <dl class="rud-dl">
+                        <dd>
+                            <input type="button" style="width: 100px;cursor: pointer;" value="查询"/>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="wareHouse-order-table">
+                    <table class="table-bordered" style="width: 100%;margin: 0 auto;">
+                        <tr>
+                            <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单编号</strong></td>
+                            <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>制单时间</strong></td>
+                            <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单类型</strong></td>
+                            <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>制单人</strong></td>
+                            <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>订单状态</strong></td>
+                            <td align="center" nowrap="nowrap" bgcolor="#f1f1f1"><strong>编辑</strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center">035101706111</td>
+                            <td align="center">2017-4-24 9:02:22</td>
+                            <td align="center">入库</td>
+                            <td align="center">admin</td>
+                            <td align="center">待审核</td>
+                            <td align="center">
+                                <a href="javascript:void (0)" style="text-decoration: underline;">修改</a>
+                                <a href="javascript:void (0)">撤销</a>
+                                <a href="javascript:void (0)" style="text-decoration: underline;">审核</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+</div><!--content/-->
+<!--<div class="footer">
+    <div class="footer-content w1200">
+        <p>金昌物流公司  2017版权所有   兰州交通大学   沪ICP备08112926号-2</p>
+    </div>
+</div>&lt;!&ndash;footer/&ndash;&gt;-->
+</body>
+</html>
+<script>
+    //侧边栏
+    $(function(){
+        $(".wareHose-system-left > dl > dt").click(function(){
+            $(this).toggleClass("current").parents("dl").siblings().find("dt").removeClass("current");
+            $(this).next("dd").slideToggle(200);
+
+        });
+    })
+
+</script>
+
+

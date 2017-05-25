@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <title>订单管理系统</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/warehose-system.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/my97datepicker/WdatePicker.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="header clearfix">
+        <div class="log"><a href="index.html">金昌物流管理系统</a></div>
+       <div class="login-links-phone">
+           <div class="login">
+               <div class="username">用户:未登录</div>
+               <div class="main_nav">
+                   <ul>
+                       <li><a class="cd-signin" href="#0">注销</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+</div><!--header/-->
+
+       <div class="wareHose-system clearfix" >
+           <div class="wareHose-system-left">
+                   <dl>
+                       <dt class="current">订单生成</dt>
+                       <dd style="display: block;">
+                           <ul>
+                               <li class="active"><a href="orderMsys.html">订单生成</a></li>
+                               <li><a href="dingdanchaxun.html">订单查询</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>订单审批</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">订单审批</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+
+           </div>
+           <div class="wareHose-system-right clearfix">
+               <div class="myposition clearfix">
+                   <div class="positionpic"><img src="images/icon.gif" alt=""/></div>
+                   <div class="positiontitle">
+                       <a href="index2.html" style="margin-left: 10px;">首页</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="orderMsys.html">订单管理系统</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="orderMsys.html">订单生成</a>
+                   </div>
+               </div>
+               <form class="orderform">
+                   <div class="orderMsys-title" style="width: 963px;margin: 0 -50px;">
+                       <ul>
+                           <li style="font-weight: 600;">身份验证</li>
+                           <li style="margin-left: 170px;color: #FF6600">为确保您所提交需求信息真实有效、请如实输入您的姓名和手机号进行短信验证</li>
+                       </ul>
+                   </div>
+                   <div class="infoitems clearfix">
+                       <div class="infodesc" style="margin-top: 20px;">
+                           验证信息
+                       </div>
+                       <div class="inputdiv">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font>联系人：</span>
+                                   <input type="text" class="text-input"/>
+                                   <span ><font style="color: red;">*</font>校验电话：</span>
+                                   <input type="text" class="text-input"/>
+                               </li>
+                               <li>
+                                   <span><font style="color: red;">*</font>验证码：</span>
+                                   <input type="text" class="text-input"/>
+                                   <button class=" text-input yzm-btn" id="yzm-btn">获取验证码</button>
+                               </li>
+
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="orderMsys-title" style="width: 963px;margin: 0 -50px;">
+                       <ul>
+                           <li style="font-weight: 600;">发货需求</li>
+                           <li style="margin-left: 170px;color: #FF6600">（请详细填写您所发运零散快运的车站信息、托运人信息、收货人信息、货物信息等）</li>
+                       </ul>
+                   </div>
+                   <span style="height: 28px;line-height: 22px;display: inline-block;margin-left: 140px;">
+                    <font style="color: red;">*</font>
+                    发货日期：
+                </span>
+                   <input type="text" onfocus="WdatePicker()" maxlength="12" class="text-input text-input_1 Wdate" readonly="" value="2017-04-19">
+                   <input type="hidden" id="minDate" name="minDate" readonly="readonly" value="2017-04-19">
+                   <div class="infoitems clearfix">
+                       <div class="infodesc">
+                           地址信息
+                       </div>
+                       <div class="inputdiv">
+                           <ul>
+                               <li>
+                                   <span>发货地：</span>
+                                   <select class="text-input text-input1">
+                                       <option>==省==</option>
+                                       <option>天水</option>
+                                       <option>金昌</option>
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==市==</option>
+                                       <option>天水</option>
+                                       <option>金昌</option>
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==县/区==</option>
+                                       <option>兰州市</option>
+                                   </select>
+                                   <input type="text" class="text-input" style="width: 190px;" placeholder="地址备注(街道-路-门牌号)"/>
+                                   <span style="width: auto;"><font style="color: red;">*</font>发货园区：</span>
+                                   <select class="text-input " style="width: 100px;">
+                                       <option>兰州物流园</option>
+                                       <option>天水物流园</option>
+                                       <option>金昌物流园</option>
+                                   </select>
+                               </li>
+                               <li>
+                                   <span>到达地：</span>
+                                   <select class="text-input text-input1">
+                                       <option>==省==</option>
+                                       <option>天水</option>
+                                       <option>金昌</option>
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==市==</option>
+                                       <option>天水</option>
+                                       <option>金昌</option>
+
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==县/区==</option>
+                                       <option>兰州市</option>
+                                   </select>
+                                   <input type="text" class="text-input" style="width: 190px;" placeholder="地址备注(街道-路-门牌号)"/>
+                                   <span style="width: auto;"><font style="color: red;">*</font>到货园区：</span>
+                                   <select class="text-input" style="width: 100px;">
+                                       <option>兰州物流园</option>
+                                       <option>天水物流园</option>
+                                       <option>金昌物流园</option>
+                                   </select>
+                               </li>
+
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="infoitems clearfix">
+                       <div class="infodesc">
+                           托运人信息
+                       </div>
+                       <div class="inputdiv">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font>联系人：</span>
+                                   <input type="text" class="text-input"/>
+                                   <span style="margin-left: 120px;"><font style="color: red;">*</font>电话：</span>
+                                   <input type="text" class="text-input"/>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="infoitems clearfix">
+                       <div class="infodesc">
+                           收货人信息
+                       </div>
+                       <div class="inputdiv">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font>联系人：</span>
+                                   <input type="text" class="text-input"/>
+                                   <span style="margin-left: 120px;"><font style="color: red;">*</font>电话：</span>
+                                   <input type="text" class="text-input"/>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="infoitems clearfix">
+                       <div class="infodesc">
+                          运输方式
+                       </div>
+                       <div class="inputdiv">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font></span>
+                                   <select class="text-input">
+                                       <option>铁路</option>
+                                       <option>公路</option>
+                                       <option>航空</option>
+                                   </select>
+
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="infoitems clearfix">
+                       <div class="infodesc">
+                           货物信息
+                       </div>
+                       <div class="inputdiv">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font>货物名称：</span>
+                                   <input type="text" class="text-input" style="width: 240px;"/>
+                                   <span style="width: auto;">包装：</span>
+                                   <input type="text" class="text-input"/>
+                                   <span style="width: auto;">件数：</span>
+                                   <input type="text" class="text-input" style="width: 50px;"/>
+                               </li>
+                               <li>
+                                   <span><font style="color: red;">*</font>总重量：</span>
+                                   <input type="text" class="text-input"/><span style="width: auto; margin-left: 10px;">kg</span>
+                                   <span>保定金额：</span>
+                                   <input type="text" class="text-input"/><span style="width: auto;margin-left: 10px;">元</span>
+                                   <span>计费重量：</span>
+                                   <input type="text" class="text-input" style="width: 50px;"/><span style="width: auto;margin-left: 10px;">kg</span>
+                               </li>
+                               <li>
+                                   <span>单价最大重量：</span>
+                                   <input type="text" class="text-input"/><span style="width: auto;margin-left: 10px;">kg</span>
+                                   <span style="width: 120px;">单件最大/长/宽/高：</span>
+                                   <input type="text" class="text-input" style="width: 40px;"/>
+                                   <span style="width: auto;">×</span>
+                                   <input type="text" class="text-input" style="width: 40px;"/>
+                                   <span style="width: auto;">×</span>
+                                   <input type="text" class="text-input" style="width: 40px;"/>
+                                   <span style="width: auto;margin-left: 10px;">cm</span>
+                                   <span style="width: auto;">总体积：</span>
+                                   <input type="text" class="text-input text-input1"/><span style="width: auto;margin-left: 10px;">m³</span>
+                               </li>
+                           </ul>
+                       </div>
+                      <!-- 大宗货物-->
+                       <div class="inputdiv" style="margin-left: 80px;">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font>货物名称：</span>
+                                   <input disabled="disabled" type="text" class="text-input" />
+                                   <span style="width: auto;margin-left: 20px;">货物特征：</span>
+                                   <span style="width:140px;text-align: left;"><strong style="color: red;">*</strong>[
+                                       <input type="radio"/>怕湿<input type="radio"/>不怕湿]</span>
+                                     <span style="width:140px;text-align: left;margin-left: -25px;"><strong style="color: red;">*</strong>[
+                                       <input type="radio"/>散堆装<input type="radio"/> 非散堆装]</span>
+                                   <span style="width: auto;">货区货位：</span>
+                                   <input type="text" class="text-input text-input1" />
+                               </li>
+                               <li>
+                                   <span>货物包装：</span>
+                                   <input type="text" class="text-input"/>
+                                   <span><font style="color: red;">*</font>最大单件重量：</span>
+                                   <input type="text" class="text-input"/><span style="width: auto;margin-left: 10px;">kg</span>
+                               </li>
+                           </ul>
+                       </div>
+                      <!-- 集装箱-->
+                       <div class="inputdiv" style="margin-left: 80px;">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font>箱类：</span>
+                                   <select class="text-input">
+                                       <option>通用标准箱</option>
+                                   </select>
+                                   <span><font style="color: red;">*</font>箱型：</span>
+                                   <select class="text-input">
+                                       <option>20英尺</option>
+                                       <option>40英尺</option>
+                                   </select>
+                                   <span><font style="color: red;">*</font>提箱日期：</span>
+                                   <input type="text" onfocus="WdatePicker()" maxlength="12" class="text-input text-input_1 Wdate" readonly="" value="2017-04-19">
+                               </li>
+                               <li>
+                                   <span><font style="color: red;">*</font>提箱方式：</span>
+                                   <select class="text-input">
+                                       <option>自行提箱</option>
+                                       <option>车站送箱</option>
+                                   </select>
+                                   <span><font style="color: red;">*</font>箱数：</span>
+                                   <input type="text" class="text-input" style="width: 50px;"/>
+                                   <span><font style="color: red;">*</font>货物名称：</span>
+                                   <input type="text" class="text-input"/>
+                                   <span><font style="color: red;">*</font>吨数：</span>
+                                   <input type="text" class="text-input" style="width: 50px;"/>
+                               </li>
+
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="orderMsys-title" style="width: 963px;margin: 0 -50px;">
+                       <ul>
+                           <li style="font-weight: 600;">物流配送</li>
+                           <li style="margin-left: 200px;color: #FF6600">（根据您的需求、填写服务信息）</li>
+                       </ul>
+                   </div>
+                   <div class="infoitems clearfix">
+                       <div class="infodesc" style="margin-top: 20px;">
+                           服务信息
+                       </div>
+                       <div class="inputdiv">
+                           <ul>
+                               <li>
+                                   <span><font style="color: red;">*</font>服务方式：</span>
+                                   <input type="radio"/>
+                                   <span style="width: auto;">门到门</span>
+                                   <input type="radio"/>
+                                   <span style="width: auto;">门到站</span>
+                                   <input type="radio"/>
+                                   <span style="width: auto;">站到门</span>
+                                   <input type="radio" checked="checked"/>
+                                   <span style="width: auto;">站到站</span>
+
+                               </li>
+                               <li>
+                                   <span style="margin-left: 20px;"><font style="color: red;">*</font>取货里程：</span>
+                                   <input type="text"style="width: 40px;" class="text-input"/><span style="width: auto;margin-left: 10px;">km</span>
+                                   <span>地址：</span>
+                                   <select class="text-input text-input1">
+                                       <option>==省==</option>
+                                       <option>甘肃省</option>
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==市==</option>
+                                       <option>兰州市</option>
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==县/区==</option>
+                                       <option>兰州市</option>
+                                   </select>
+                                   <input type="text" class="text-input" style="width: 190px;" placeholder="地址备注(街道-路-门牌号)"/>
+                               </li>
+                               <li>
+                                   <span style="margin-left: 20px;"><font style="color: red;">*</font>取货里程：</span>
+                                   <input type="text"style="width: 40px;" class="text-input"/><span style="width: auto;margin-left: 10px;">km</span>
+                                   <span>地址：</span>
+                                   <select class="text-input text-input1">
+                                       <option>==省==</option>
+                                       <option>甘肃省</option>
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==市==</option>
+                                       <option>兰州市</option>
+                                   </select>
+                                   <select class="text-input text-input1">
+                                       <option>==县/区==</option>
+                                       <option>兰州市</option>
+                                   </select>
+                                   <input type="text" class="text-input" style="width: 190px;" placeholder="地址备注(街道-路-门牌号)"/>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <input type="button" value="提交" class="yzm-btn text-input" style="margin-left: 260px;color: #fff;background: #ffa400;"/>
+                   <input type="button" value="重置" class="yzm-btn text-input" style="color: #fff;background: #4b5cc4;"/>
+               </form>
+
+           </div>
+
+       </div>
+    </div>
+</div><!--content/-->
+
+</body>
+</html>
+<script>
+    //侧边栏
+$(function(){
+    $(".wareHose-system-left > dl > dt").click(function(){
+        $(this).toggleClass("current").parents("dl").siblings().find("dt").removeClass("current");
+        $(this).next("dd").slideToggle(200);
+
+    });
+   var heightLeft = $(".wareHose-system-right").height();
+    $(".wareHose-system-left").height(heightLeft)+"px";
+})
+
+</script>
+<script>
+    var btn = document.getElementById("yzm-btn");
+    var count = 10;  // 数据的 10
+    var timer = null; // 定时器的名字
+    btn.onclick = function() {
+        clearInterval(timer);  // 先清除掉原来的定时器
+        // alert(this.disabled);
+        this.disabled = true;
+        //alert(this);  // this 指向的是 btn
+        var that = this;  // 把 btn 对象 给 that  var _this = this;
+        timer = setInterval(sendTextMessage,1000);  // 开启定时器 名字  timer
+        function sendTextMessage() {
+            count--;
+            if(count >= 0 )
+            {
+                that.innerHTML =  "还剩余"+count+"秒";
+            }
+            else
+            {
+                that.innerHTML = "重新获取验证码";
+                that.disabled = false;
+                clearInterval(timer);  // 清除定时器
+                count = 10;
+            }
+
+
+        }
+
+    }
+
+</script>

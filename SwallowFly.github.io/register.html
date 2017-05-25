@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>注册</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/register.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="h-header clearfix">
+    <div class="w1200 clearfix">
+        <div class="log"><a href="index.html"><img src="images/logo.png" width="180" height="74" /></a></div>
+        <div class="login-links-phone">
+            <div class="link-phone">  <p>服务热线：<strong>4001001717</strong></p></div>
+            <div class="h-login">
+                <div class="username">用户:未登录</div>
+                <div class="main_nav">
+                    <ul>
+                        <li><a class="cd-signin" href="#0">注销</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div><!--header/-->
+<nav id="nav">
+    <ul>
+        <li><a href="index.html">网站首页</a></li>
+        <li><a href="about.html">关于我们</a>
+            <ul>
+                <li><a href="#">公司介绍</a></li>
+            </ul>
+        </li>
+        <li><a href="#">新闻中心</a>
+            <ul>
+                <li><a href="#">园区新闻</a></li>
+                <li><a href="#">行业资讯</a></li>
+                <li><a href="#">公司内刊</a></li>
+            </ul>
+        </li>
+        <li><a href="#">服务业务</a>
+            <ul>
+                <li><a href="orderuser.html">我要发货</a></li>
+                <li><a href="#">运费查询</a></li>
+
+            </ul>
+        </li>
+        <li><a href="#">招贤纳士</a></li>
+        <li><a href="#">联系我们</a></li>
+
+
+    </ul>
+    <div class="clear">  </div>
+</nav><!--nav/-->
+<h1>金昌物流园<sup></sup></h1>
+
+<div class="login" style="margin-top:50px;">
+
+    <div class="header">
+        <div class="switch" id="switch">
+            <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">个人注册</a>
+            <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">企业注册</a>
+            <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
+        </div>
+    </div>
+
+
+    <!--个人注册-->
+    <div class="web_qr_login" id="web_qr_login" style="display: block;">
+
+
+        <div class="web_login" id="web_login" >
+            <div class="login-box">
+                <div class="login_form">
+                    <form action="" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" method="post"><input type="hidden" name="did" value="0"/>
+                        <input type="hidden" name="to" value="log"/>
+                        <div class="pwdArea">
+                            <label class="input-tips">用户名：</label>
+                            <div class="inputOuter">
+                                <input type="text"  name="username" class="inputstyle"/>
+                            </div>
+                        </div>
+                        <div class="pwdArea">
+                            <label class="input-tips" >手机号：</label>
+                            <div class="inputOuter">
+                                <input type="password"  class="inputstyle"/>
+                            </div>
+                        </div>
+                        <div class="pwdArea">
+                            <label class="input-tips" >身份证：</label>
+                            <div class="inputOuter">
+
+                                <input type="password" name="p" class="inputstyle"/>
+                            </div>
+                        </div>
+                        <div class="pwdArea">
+                            <label class="input-tips" >密码：</label>
+                            <div class="inputOuter">
+
+                                <input type="password" name="p" class="inputstyle"/>
+                            </div>
+                        </div>
+                        <div class="pwdArea">
+                            <label class="input-tips" >确认密码：</label>
+                            <div class="inputOuter">
+
+                                <input type="password" name="p" class="inputstyle"/>
+                            </div>
+                        </div>
+                        <div class="clearfix" style="padding-left:150px;margin-top:20px;">
+                            <input type="submit" value="提 交 注 册" style="width:150px;" class="button_blue"/>
+                            <p >我已经注册，现在就<a href="login.html" style="color: #30b1e6;">登录</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--个人注册end-->
+
+    <!--企业注册-->
+    <div class="qlogin" id="qlogin" style="display: none; ">
+
+        <div class="web_login">
+            <form name="form2" id="regUser" accept-charset="utf-8"  action="login.html" method="post">
+            <input type="hidden" name="to" value="reg"/>
+            <input type="hidden" name="did" value="0"/>
+            <ul class="reg_form" id="reg-ul">
+                <li>
+
+                    <label   class="input-tips2">客户代码：</label>
+                    <div class="inputOuter2">
+                        <input type="text" class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+
+                    <label   class="input-tips2">所属园区：</label>
+                    <div class="inputOuter2">
+                        <input type="text" class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+
+                    <label   class="input-tips2">客户名称：</label>
+                    <div class="inputOuter2">
+                        <input type="text" class="inputstyle2"/>
+                    </div>
+
+                </li>
+
+                <li>
+                    <label  class="input-tips2">法人姓名：</label>
+                    <div class="inputOuter2">
+                        <input type="password"   class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+                    <label  class="input-tips2">企业注册地址：</label>
+                    <div class="inputOuter2">
+                        <input type="password"   class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+                    <label  class="input-tips2">邮政编码：</label>
+                    <div class="inputOuter2">
+                        <input type="password"   class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+                    <label class="input-tips2" style="display: inline-block;height: 40px;">企业注册地址类型：</label>
+                    <div class="inputOuter2 clearfix">
+                        <select style="height: 42px;width: 217px;border-color:#ccc; ">
+                            <option>国有企业</option>
+                            <option>集体企业</option>
+                            <option>股份合作企业</option>
+                            <option>联营企业</option>
+                            <option>有限责任公司</option>
+                            <option>股份有限公司</option>
+                            <option>私营企业</option>
+                            <option>港澳台投资企业</option>
+                            <option>外商投资企业</option>
+                            <option>个体经营</option>
+                        </select>
+                    </div>
+
+                </li>
+                <li>
+                    <label  class="input-tips2">营业执照主营业务：</label>
+                    <div class="inputOuter2">
+
+                        <input type="text"  class="inputstyle2"/>
+                    </div>
+
+                </li>
+
+                <li>
+                    <label  class="input-tips2">联系人姓名：</label>
+                    <div class="inputOuter2">
+
+                        <input type="text"  class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+                    <label  class="input-tips2">办公电话：</label>
+                    <div class="inputOuter2">
+
+                        <input type="text"  class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+                    <label  class="input-tips2">手机：</label>
+                    <div class="inputOuter2">
+
+                        <input type="text"  class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+                    <label  class="input-tips2">邮箱：</label>
+                    <div class="inputOuter2">
+
+                        <input type="text"  class="inputstyle2"/>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="inputArea">
+                        <input type="button" id="reg"  style="margin-top:10px;margin-left:50px;" class="button_blue" value="同意协议并注册"/>
+                        <p style="margin-left: 215px;">我已经注册，现在就<a href="login.html" style="color: #30b1e6;">登录</a>
+                        </p>
+                    </div>
+
+                </li><div class="cl"></div>
+            </ul></form>
+
+
+        </div>
+
+
+    </div>
+    <!--企业注册end-->
+</div>
+<div class="jianyi">*推荐使用ie8或以上版本ie浏览器或Chrome内核浏览器访问本站</div>
+</body></html>
+<script>
+    $(function(){
+
+        $('#switch_qlogin').click(function(){
+            $('#switch_login').removeClass("switch_btn_focus").addClass('switch_btn');
+            $('#switch_qlogin').removeClass("switch_btn").addClass('switch_btn_focus');
+            $('#switch_bottom').animate({left:'0px',width:'70px'});
+            $('#qlogin').css('display','none');
+            $('#web_qr_login').css('display','block');
+
+        });
+        $('#switch_login').click(function(){
+
+            $('#switch_login').removeClass("switch_btn").addClass('switch_btn_focus');
+            $('#switch_qlogin').removeClass("switch_btn_focus").addClass('switch_btn');
+            $('#switch_bottom').animate({left:'154px',width:'70px'});
+
+            $('#qlogin').css('display','block');
+            $('#web_qr_login').css('display','none');
+        });
+
+    });
+    //获取当前的年份
+    var date = new  Date().getFullYear();
+    $("sup").html('V'+date);
+
+</script>

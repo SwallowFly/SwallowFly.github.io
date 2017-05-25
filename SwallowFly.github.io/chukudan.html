@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <title>出库单管理</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/warehose-system.css"/>
+    <link rel="stylesheet" href="css/GridManager.min.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="./js/jquery.flexslider-min.js"></script>
+    <script src="js/GridManager.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="header clearfix">
+        <div class="log"><a href="index.html">金昌物流管理系统</a></div>
+       <div class="login-links-phone">
+           <div class="login">
+               <div class="username">用户:admin</div>
+               <div class="main_nav">
+                   <ul>
+                       <li><a class="cd-signin" href="#0">注销</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+
+
+</div><!--header/-->
+       <div class="wareHose-system clearfix">
+           <div class="wareHose-system-left">
+
+                   <dl>
+                       <dt>仓库及货位分布展示</dt>
+                       <dd>
+                           <ul>
+                               <li class="active"><a href="#">仓库及货位分布展示</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>入库管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">预约入库</a></li>
+                               <li><a href="rukudan.html">入库单管理</a></li>
+                               <li><a href="#">入库作业单管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>串码管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">串码生成</a></li>
+                               <li><a href="#">带串码商品管理</a></li>
+
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt class="current">出库管理</dt>
+                       <dd style="display: block;">
+                           <ul>
+                               <li class="active"><a href="#">出库单管理</a></li>
+                               <li><a href="#">出库作业单管理</a></li>
+
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>库存管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="shishikucun.html">实时库存</a></li>
+                               <li><a href="huoweiguanli.html">货位管理</a></li>
+                               <li><a href="#">出入库流水</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>盘点管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">盘点管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>移库管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">移库单管理</a></li>
+                               <li><a href="#">移库作业单管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>条码管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">条码生成管理</a></li>
+                               <li><a href="#">带条码商品管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>仓库装卸管理</dt>
+                       <dd>
+                           <ul>
+                               <li><a href="#">装卸看板</a></li>
+                               <li><a href="#">装卸工任务管理</a></li>
+                           </ul>
+                       </dd>
+                   </dl>
+           </div>
+           <div class="wareHose-system-right" >
+               <div class="myposition clearfix">
+                   <div class="positionpic"><img src="images/icon.gif" alt=""/></div>
+                   <div class="positiontitle">
+                       <a href="index2.html" style="margin-left: 10px;">首页</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="warehoseSystem.html">仓储管理系统</a>
+                       <font style="color:black;font-family:cursive;">&gt;</font>
+                       <a href="chukudan.html">出库单管理</a>
+                   </div>
+               </div>
+                <div class="wareHose-system-rkd-hd">
+                    <div class="wareHose-system-rkd-title clearfix">
+                        <dl class="rud-dl">
+                            <dt>入库类型：</dt>
+                            <dd>
+                                <select>
+                                    <option>正常入库</option>
+                                    <option>正常入库</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>主仓储区：</dt>
+                            <dd>
+                                <select>
+                                    <option>保税区</option>
+                                    <option>保税区</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>仓库区编号：</dt>
+                            <dd>
+                                <input type="text"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>存储单位：</dt>
+                            <dd>
+                                <select style="width: 242px;">
+                                    <option>阿斯塔纳航空公司</option>
+                                    <option>阿斯塔纳航空公司</option>
+                                </select>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="wareHose-system-rkd-con clearfix">
+                        <dl class="rud-dl">
+                            <dt>出库单编号：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>领用人：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>制单时间：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>发货部门：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>领料部门：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                        <dl class="rud-dl">
+                            <dt>出库人：</dt>
+                            <dd>
+                                <input type="text" class="input-width"/>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+               <div class="dialog-demo">
+                   <table grid-manager="demoOne" class="table-bordered">
+
+                   </table>
+                  </div>
+               </div>
+           </div>
+</div><!--content/-->
+
+</body>
+</html>
+<script>
+    //侧边栏
+$(function(){
+    $(".wareHose-system-left > dl > dt").click(function(){
+        $(this).toggleClass("current").parents("dl");
+        $(this).next("dd").slideToggle(200);
+
+    });
+
+})
+
+</script>
+<script type="text/javascript" >
+    $('table').GM({
+        supportRemind: true
+        ,gridManagerName: 'test'
+//			,disableCache:true
+        ,height: '600px'
+        ,supportAjaxPage:true
+        ,supportSorting: true
+        ,ajax_url: 'http://www.lovejavascript.com/learnLinkManager/getLearnLinkList'
+        ,ajax_type: 'POST'
+        ,query: {pluginId: 1}
+        ,pageSize:100
+        ,columnData: [{
+            key: 'name',
+            remind: 'the name',
+            width: '100px',
+            text: '名称',
+            sorting: 'up'
+        },{
+            key: 'info',
+            remind: 'the info',
+            text: '使用说明',
+            sorting: ''
+        },{
+            key: 'url',
+            remind: 'the url',
+            text: 'url'
+        },{
+            key: 'createDate',
+            remind: 'the createDate',
+            text: '创建时间',
+            template: function(createDate, rowObject){
+                return new Date(createDate).format('YYYY-MM-DD HH:mm:ss');
+            }
+        },{
+            key: 'lastDate',
+            remind: 'the lastDate',
+            text: '最后修改时间',
+            template: function(lastDate, rowObject){
+                return new Date(lastDate).format('YYYY-MM-DD HH:mm:ss');
+            }
+        },{
+            key: 'action',
+            remind: 'the action',
+            text: '操作',
+            template: function(action, rowObject){
+                return '<span class="plugin-action edit-action" learnLink-id="'+rowObject.id+'">编辑</span>'
+                        +'<span class="plugin-action del-action" learnLink-id="'+rowObject.id+'">删除</span>';
+            }
+        }
+        ]
+        // 分页前事件
+        ,pagingBefore: function(query){
+            console.log('pagingBefore', query);
+        }
+        // 分页后事件
+        ,pagingAfter: function(data){
+            console.log('pagingAfter', data);
+        }
+        // 排序前事件
+        ,sortingBefore: function (data) {
+            console.log('sortBefore', data);
+        }
+        // 排序后事件
+        ,sortingAfter: function (data) {
+            console.log('sortAfter', data);
+        }
+        // 宽度调整前事件
+        ,adjustBefore: function (event) {
+            console.log('adjustBefore', event);
+        }
+        // 宽度调整后事件
+        ,adjustAfter: function (event) {
+            console.log('adjustAfter', event);
+        }
+        // 拖拽前事件
+        ,dragBefore: function (event) {
+            console.log('dragBefore', event);
+        }
+        // 拖拽后事件
+        ,dragAfter: function (event) {
+            console.log('dragAfter', event);
+        }
+    });
+
+    // 日期格式化,不是插件的代码,只用于处理时间格式化
+    Date.prototype.format = function(fmt){
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "D+": this.getDate(), //日
+            "d+": this.getDate(), //日
+            "H+": this.getHours(), //小时
+            "h+": this.getHours(), //小时
+            "m+": this.getMinutes(), //分
+            "s+": this.getSeconds(), //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds() //毫秒
+        };
+        if (/([Y,y]+)/.test(fmt)){
+            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        }
+        for (var k in o){
+            if(new RegExp("(" + k + ")").test(fmt)){
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            }
+        }
+        return fmt;
+    }
+    var heightLeft = $(".wareHose-system-right").height();
+    $(".wareHose-system-left").height(heightLeft)+"px";
+</script>

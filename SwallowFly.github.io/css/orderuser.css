@@ -1,0 +1,63 @@
+.user-order {width: 1200px;margin: 0 auto;}
+.orderMsys-title {
+    height: 29px;
+    border: 1px solid #C6E2F2;
+    border-top: none;
+    border-bottom: none;
+    background-color: #e0e0e0;
+    color: #333333;
+    line-height: 29px;
+    padding-left: 16px;
+    clear: both;}
+.orderMsys-title ul li {float: left;}
+
+.orderform {
+    font-family: Microsoft YaHei,SimHei,SimSun;
+    font-size: 12px;
+    padding: 0px;
+    border: 0px solid #cccdd3;
+    width: 880px;
+    margin: 0 auto;
+
+}
+.orderform .yzm-btn {background: #f8b862;cursor: pointer;margin-left: 50px;}
+.orderform .text-input {width: 120px;
+    color: #555;
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.orderform input, .orderform select, .orderform textarea {
+    margin-bottom: 5px;
+}
+.orderform .text-input1 {width: 90px;}
+.infoitems {margin-bottom: 20px;}
+.infodesc {
+    background: #426666;
+    width: 77px;
+    line-height: 23px;
+    text-align: center;
+    float: left;
+    display: inline;
+    font-size: 14px;
+    color:#fff;
+}
+.orderform .inputdiv {
+    float: left;
+    display: block;
+    width: 800px;
+
+
+}
+.orderform .inputdiv ul li {
+    margin-left: 20px;
+}
+.orderform .inputdiv span {
+    height: 20px;
+    line-height: 14px;
+    color: #000;
+    width: 95px;
+    text-align: right;
+    display: inline-block;
+}
